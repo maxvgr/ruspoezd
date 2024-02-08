@@ -17,6 +17,25 @@
     }
   }
 
+  &.small &__wrapper {
+    @include breakpoint($breakpoint-notebook) {
+      margin-bottom: 100px;
+    }
+    // @include breakpoint($breakpoint-tablet) {
+    //   margin-bottom: 0;
+    // }
+    @include breakpoint($breakpoint-mobile) {
+      height: 200px;
+    }
+
+    height: 260px;
+    background-position: center 30%;
+  }
+
+  &.small &__order {
+    top: 138px;
+  }
+
   &__wrapper {
     @include breakpoint($breakpoint-tablet) {
       height: 376px;
