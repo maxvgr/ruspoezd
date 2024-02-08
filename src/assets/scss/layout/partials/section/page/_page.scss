@@ -1,0 +1,74 @@
+.page__stat {
+  &-back {
+    margin: 20px 0 30px;
+
+    a {
+      display: inline-block;
+      color: $color-text__blue;
+      font-weight: $weight-Regular;
+      font-size: 20px;
+      line-height: 20px;
+
+      span {
+        display: block;
+        padding-left: 25px;
+      }
+
+      &::before {
+        content: "";
+        position: relative;
+        top: 22px;
+        left: 0;
+        display: block;
+        width: 20px;
+        height: 20px;
+        background-image: url("../assets/img/layout/global/arrow-left-blue.svg");
+        background-position: left;
+        background-size: contain;
+        background-repeat: no-repeat;
+        transition: $transition-time ease;
+      }
+    }
+  }
+
+  &-info {
+    font-weight: $weight-Regular;
+    font-size: 16px;
+    line-height: 28px;
+
+    h1 {
+      padding: 10px 0 15px;
+      font-weight: $weight-Bold;
+      font-size: 30px;
+      line-height: 30px;
+    }
+
+    a {
+      color: $color-text__blue;
+      font-weight: $weight-Bold;
+      font-size: 18px;
+      text-decoration: underline;
+      transition: $transition;
+
+      &:hover {
+        color: #cccccc;
+        text-decoration: none;
+      }
+    }
+
+    img {
+      float: left;
+      width: 30%;
+      margin: 10px 50px 25px 0;
+    }
+
+    ul {
+      padding-left: 20px;
+
+      li {
+        padding-left: 10px;
+        list-style: disc;
+      }
+    }
+  }
+}

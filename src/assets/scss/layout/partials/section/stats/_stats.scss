@@ -1,0 +1,57 @@
+.stats {
+  h1 {
+    padding-bottom: 40px;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 30px;
+    text-align: center;
+  }
+
+  &__card-wrap {
+    @include breakpoint($breakpoint-notebook) {
+      grid-template-columns: 1fr 1fr;
+    }
+    @include breakpoint($breakpoint-tablet) {
+      grid-template-columns: 1fr;
+    }
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    padding-bottom: 10px;
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    justify-content: space-between;
+    padding: 15px;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px 0 #00000026;
+
+    img {
+      border-radius: 10px;
+    }
+
+    &-title {
+      padding: 15px 0;
+      font-weight: 700;
+      font-size: 22px;
+      line-height: 22px;
+    }
+
+    a {
+      display: block;
+      margin-top: 20px;
+      padding: 15px;
+      border-radius: 15px;
+      background: $palette-blue;
+      color: $color-text__white;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 20px;
+      text-align: center;
+    }
+  }
+}

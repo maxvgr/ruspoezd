@@ -1,0 +1,124 @@
+// -----------------------------------------------------------------------------
+// В этом файле прописываются все стили относящиеся к подвалу сайта
+// -----------------------------------------------------------------------------
+
+#footer {
+}
+
+.footer {
+  @include breakpoint($breakpoint-tablet) {
+    grid-template-rows: 70px 70px;
+    grid-template-columns: 1fr 1fr;
+    height: min-content;
+    padding-bottom: 20px;
+  }
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  height: 120px;
+  margin-top: 60px;
+  padding: 0 60px;
+  border-radius: 50px 50px 0 0;
+  background: $palette-primary;
+  color: $color-text__white;
+
+  &__logo {
+    @include breakpoint($breakpoint-tablet) {
+      grid-row-start: 2;
+      grid-row-end: 3;
+    }
+    @include breakpoint($breakpoint-mobile) {
+      top: 0;
+      left: 0;
+    }
+
+    position: relative;
+    top: 8px;
+    left: 0;
+
+    .logo--header {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      color: $color-text__white;
+      font-weight: $weight-Regular;
+      font-size: 10px;
+      font-family: $font-default;
+      line-height: 10px;
+
+      img {
+        @include breakpoint($breakpoint-mobile) {
+          width: 38px;
+          height: 38px;
+        }
+      }
+
+      p {
+        @include breakpoint($breakpoint-mobile) {
+          display: none;
+        }
+
+        span {
+          font-weight: $weight-Bold;
+          font-size: 20px;
+          line-height: 20px;
+        }
+      }
+    }
+  }
+
+  &__nav {
+    @include breakpoint($breakpoint-tablet) {
+      grid-column-start: 1;
+      grid-column-end: 3;
+    }
+    @include breakpoint($breakpoint-mobile) {
+      margin-top: -6px;
+    }
+
+    justify-self: center;
+
+    .nav__list {
+      @include breakpoint($breakpoint-mobile) {
+        gap: 2px;
+        padding: 4px 10px;
+      }
+
+      display: flex;
+      gap: 10px;
+      margin-top: 20px;
+      padding: 7px;
+
+      .nav__item {
+        @include breakpoint($breakpoint-tablet) {
+          background-color: unset;
+          color: $color-text__white;
+        }
+        @include breakpoint($breakpoint-mobile) {
+          padding: 4px 10px;
+        }
+
+        gap: 10px;
+        padding: 4px 20px;
+        border-radius: 410px;
+        background-color: $palette-white;
+        color: $color-text__primary;
+        transition: $transition;
+      }
+    }
+  }
+
+  &__copy {
+    justify-self: end;
+    padding-top: 20px;
+    font-weight: $weight-Regular;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: right;
+
+    span {
+      color: #cccccc;
+    }
+  }
+}

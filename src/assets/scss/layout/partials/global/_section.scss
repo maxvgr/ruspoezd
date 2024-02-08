@@ -1,0 +1,84 @@
+main {
+  @include breakpoint($breakpoint-notebook) {
+    margin-top: 20px;
+  }
+  @include breakpoint($breakpoint-tablet) {
+    margin-top: 180px;
+  }
+  @include breakpoint($breakpoint-mobile) {
+    margin-top: 180px;
+  }
+
+  margin-top: 0;
+}
+
+.popular {
+  padding: 20px 0;
+
+  &__card-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  h2 {
+    padding: 60px 0 40px;
+    font-weight: $weight-Bold;
+    font-size: 30px;
+    line-height: 30px;
+    text-align: center;
+  }
+
+  &__card {
+    position: relative;
+    width: 263px !important;
+    height: 355px;
+    background-image: url("../assets/img/layout/popular/bg-card.png");
+    background-position: center;
+    background-repeat: no-repeat;
+
+    &-price {
+      position: absolute;
+      top: 30px;
+      right: 35px;
+      padding: 2px 5px;
+      border-radius: 5px;
+      background: $palette-blue;
+      color: $color-text__white;
+    }
+
+    img.image {
+      object-fit: cover;
+      height: 290px;
+      padding: 20px 25px;
+      border-radius: 35px;
+      transition: .5s;
+
+      &:hover {
+        transform: scale(1.04);
+      }
+    }
+
+    &-text {
+      display: flex;
+      justify-content: space-between;
+      padding: 0 25px;
+      font-weight: $weight-Medium;
+      font-size: 30px;
+      font-family: $font-third;
+      line-height: 30px;
+
+      .second {
+        text-align: right;
+      }
+
+      span {
+        display: block;
+        color: $color-text__blue;
+        font-weight: $weight-Medium;
+        font-size: 10px;
+        font-family: $font-default;
+        line-height: 10px;
+      }
+    }
+  }
+}

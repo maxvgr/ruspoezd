@@ -1,0 +1,67 @@
+.slider {
+  display: flex;
+  justify-content: center;
+
+  .slick-list {
+    @media screen and (min-width: 1200px) {
+      width: 100%;
+    }
+  }
+
+  .slick-track {
+    @media screen and (min-width: 1200px) {
+      width: 100% !important;
+    }
+  }
+
+  .slick-prev {
+    background: url("../assets/img/layout/global/arrow-left.png") 0 center no-repeat transparent;
+    left: 0;
+
+    &:hover {
+      top: calc(50% - 39px);
+      background: url("../assets/img/layout/global/arrow-left-a.png") 0 center no-repeat transparent;
+      cursor: pointer;
+    }
+  }
+
+  .slick-next {
+    background: url("../assets/img/layout/global/arrow-right.png") 0 center no-repeat transparent;
+    right: 0;
+
+    &:hover {
+      top: calc(50% - 30px);
+      background: url("../assets/img/layout/global/arrow-right-a.png") 0 center no-repeat transparent;
+      cursor: pointer;
+    }
+  }
+
+  .slick-arrow {
+    position: absolute;
+    z-index: 100;
+    top: calc(50% - 35px);
+    width: 70px;
+    height: 70px;
+    border: none;
+    text-indent: -9999px;
+  }
+
+  // .slick-arrow {
+  //   position: absolute;
+  //   cursor: pointer;
+  //   font-size: 25px;
+  //   color: #330867;
+  //   background-color: #fff;
+  //   padding: 3px 10px;
+  //   bottom: -50px;
+  // }
+
+  // .slick-prev {
+  //   right: 50px;
+  //   transform: rotate(180deg);
+  // }
+
+  // .slick-next {
+  //   right: 0px;
+  // }
+}

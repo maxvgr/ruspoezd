@@ -1,0 +1,55 @@
+.advantages {
+  margin-top: 40px;
+
+  .container {
+      padding: 50px 55px 55px 55px;
+      border-radius: 50px;
+      background: linear-gradient(90deg, #5aa6ff 0%, #426bff 100%);
+
+    h2 {
+      margin-bottom: 60px;
+      font-size: 30px;
+      font-weight: 700;
+      line-height: 30px;
+      text-align: center;
+      color: #FFFFFF;
+    }
+  }
+
+  &__card-wrapper {
+    @include breakpoint($breakpoint-notebook) {
+      grid-template-columns: 1fr 1fr;
+    }
+    @include breakpoint($breakpoint-tablet) {
+      grid-template-columns: 1fr;
+    }
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    align-items: center;
+  }
+
+  &__card {
+    border-radius: 15px;
+    background: url("../assets/img/layout/advantages/marker.svg") 15px center no-repeat #FFFFFF;
+
+    &-text {
+      padding: 25px 20px 25px 60px;
+
+      // &::before {
+      //   content: "";
+      //   display: block;
+      //   position: relative;
+      //   float: left;
+      //   width: 26px;
+      //   height: 27px;
+      //   top: calc(50% - 13px);
+      //   left: 15px;
+      //   background-image: url("/src/assets/img/layout/advantages/marker.svg");
+      //   background-position: center;
+      //   background-repeat: no-repeat;
+      // }
+    }
+  }
+}

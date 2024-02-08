@@ -1,0 +1,172 @@
+// -----------------------------------------------------------------------------
+// В этом файле прописываются все стили относящиеся к шапке сайта
+// -----------------------------------------------------------------------------
+
+#header {
+  padding-bottom: 130px;
+}
+
+.header {
+  .container {
+    @include breakpoint($breakpoint-notebook) {
+      max-width: 1000px;
+    }
+    @include breakpoint($breakpoint-mobile) {
+      min-width: 300px;
+      padding: 0;
+    }
+  }
+
+  &__wrapper {
+    @include breakpoint($breakpoint-tablet) {
+      height: 376px;
+      background: linear-gradient(90deg, #5aa6ff 0%, #426bff 100%);
+    }
+    @include breakpoint($breakpoint-mobile) {
+      height: 376px;
+    }
+
+    height: 560px;
+    border-radius: 0 0 50px 50px;
+    background-image: url("../assets/img/layout/global/bg-header.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    &-top {
+      @include breakpoint($breakpoint-tablet) {
+        grid-template-columns: 1fr 2fr;
+      }
+
+      display: grid;
+      grid-template-columns: 1fr 3fr 1fr;
+    }
+  }
+
+  &__logo {
+    @include breakpoint($breakpoint-mobile) {
+      top: 16px;
+      left: 10px;
+    }
+
+    position: relative;
+    top: 20px;
+    left: 25px;
+
+    .logo--header {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      color: $color-text__white;
+      font-weight: $weight-Regular;
+      font-size: 10px;
+      font-family: $font-default;
+      line-height: 10px;
+
+      img {
+        @include breakpoint($breakpoint-mobile) {
+          width: 38px;
+          height: 38px;
+        }
+      }
+
+      p {
+        @include breakpoint($breakpoint-mobile) {
+          display: none;
+        }
+
+        span {
+          font-weight: $weight-Bold;
+          font-size: 20px;
+          font-family: $font-default;
+          line-height: 20px;
+        }
+      }
+    }
+  }
+
+  &__nav {
+    @include breakpoint($breakpoint-mobile) {
+      margin-top: -6px;
+    }
+
+    justify-self: center;
+
+    .nav__list {
+      @include breakpoint($breakpoint-mobile) {
+        gap: 2px;
+        padding: 4px 10px;
+      }
+
+      display: flex;
+      gap: 10px;
+      margin-top: 20px;
+      padding: 7px;
+      border: 1px solid $palette-white;
+      border-radius: 500px;
+
+      .nav__item {
+        @include breakpoint($breakpoint-mobile) {
+          padding: 4px 10px;
+        }
+
+        gap: 10px;
+        padding: 4px 20px;
+        border-radius: 410px;
+        color: $color-text__white;
+        transition: $transition;
+
+        &:hover,
+        &.current-menu-item,
+        &.active {
+          background-color: $palette-white;
+          color: $color-text__primary;
+        }
+      }
+    }
+  }
+
+  &__title {
+    @include breakpoint($breakpoint-tablet) {
+      font-size: 30px;
+      line-height: 30px;
+    }
+    @include breakpoint($breakpoint-mobile) {
+      margin-top: 50px;
+    }
+
+    margin-top: 100px;
+    color: $color-text__white;
+    font-weight: $weight-Bold;
+    font-size: 77px;
+    line-height: 77px;
+    text-align: center;
+    white-space: pre;
+  }
+
+  &__order {
+    @include breakpoint($breakpoint-notebook) {
+      width: 80%;
+    }
+    @include breakpoint($breakpoint-tablet) {
+      top: 280px;
+    }
+    @include breakpoint($breakpoint-mobile) {
+      top: 220px;
+    }
+
+    position: absolute;
+    z-index: 10;
+    top: 438px;
+    right: 0;
+    left: 0;
+    width: 924px;
+    height: auto;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 22px;
+    border-radius: 20px;
+    background-color: $palette-white;
+    box-shadow: 0 4px 10px 0 #00000026;
+  }
+}
