@@ -15,6 +15,11 @@ main {
 .popular {
   padding: 20px 0;
 
+  .container {
+    // width: calc(100% + 50px);
+    padding: 0;
+  }
+
   &__card-wrapper {
     display: flex;
     flex-wrap: wrap;
@@ -42,13 +47,14 @@ main {
       right: 35px;
       padding: 2px 5px;
       border-radius: 5px;
+      font-size: $font-size__text--small;
       background: $palette-blue;
       color: $color-text__white;
     }
 
     img.image {
       object-fit: cover;
-      height: 290px;
+      // height: 290px;
       padding: 20px 25px;
       border-radius: 35px;
       transition: .5s;

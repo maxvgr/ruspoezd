@@ -1,39 +1,29 @@
-$(document).ready(function () {
-  $(".slider").slick({
-    slidesToShow: 5,
-    slidesToScroll: 1,
-    // lazyLoad: "ondemand",
-    infinite: true,
-    centerMode: true,
-    centerPadding: "50px",
-    autoplay: true,
-    autoplaySpeed: 1500,
-    responsive: [
-      {
-          breakpoint: 1450,
-          settings: {
-              slidesToShow: 4,
-              slidesToScroll: 1,
-          }
-      },
-      {
-          breakpoint: 1200,
-          settings: {
-              slidesToShow: 2,
-              slidesToScroll: 1
-          }
-      },
-      {
-          breakpoint: 800,
-          settings: {
-              slidesToShow: 1,
-              slidesToScroll: 1
-          }
-      }
-  ]
-  });
+const swiper = new Swiper('.swiper', {
+  // Optional parameters
+  slidesPerView: 6,
+  spaceBetween: 0,
+  lazy: true,
+  autoplay: {
+    delay: 5000,
+  },
+  loop: true,
+  // speed: 800,
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
 });
 
-// $(".slick-prev").text("-");
-// $('.slick-prev').text('');
-// $(".slick-next").text("❯");
+// Назначение событий на кнопки навигации
+// const swiperPrev = document.getElementById('swiperPrev')
+// const swiperNext = document.getElementById('swiperNext')
+
+// swiperPrev.addEventListener('click', () => {
+//   swiper.slidePrev();
+// })
+// swiperNext.addEventListener('click', () => {
+//   swiper.slideNext();
+// })
+
+

@@ -16,12 +16,15 @@
   }
 
   &__card {
+    @include breakpoint($breakpoint-notebook) {
+      grid-template-columns: 1fr 2fr;
+    }
     @include breakpoint($breakpoint-tablet) {
       grid-template-columns: 1fr;
     }
 
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 482px 2fr;
     gap: 20px;
     align-items: start;
     padding: 15px;
