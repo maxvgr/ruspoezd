@@ -16,6 +16,10 @@ main {
   padding: 20px 0;
 
   .container {
+    @include breakpoint($breakpoint-tablet) {
+      max-width: 750px;
+    }
+
     // width: calc(100% + 50px);
     padding: 0;
   }
